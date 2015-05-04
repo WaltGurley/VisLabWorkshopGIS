@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/main.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<h1>Mapping resources for North Carolina Educators</h1>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<img src="css\media\SchoolsMapNC.png" alt="North Carolina Public Schools" class="img-responsive center-block"/>
+				</div>
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<h2 class="section">About</h2>
+				  <p>
+				  	This is a resource for educators interested in utilizing mapping and Geographic Information Systems (GIS) in their curriculum. The ubiquity of modern mapping technologies and their applications across science and society justifies the need to introduce students to this powerful tool for understanding and exploring our world. While not exhaustive, this site contains information and links to resources for learning and teaching GIS and mapping. It is focused on data related to North Carolina but should be applicable to anyone interested in mapping.
+				  </p>
+				</div>
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<h2 class="section">Geographic Information Systems (GIS)</h2>
+				  <p>
+				  	A GIS is a computer program for creating, editing, analyzing, and visualizing spatial data. Any information that has a spatial context (state borders, streams, <a href="http://onemilliontweetmap.com/" target="_blank">tweets</a>, etc.) can be used in GIS.
+				  </p>
+					<h3>QGIS</h3>
+					<p>
+						There are several GIS applications available, but QGIS stands out as a free and open source application available for all major operating systems (Windows, Mac, and Linux). It is a powerful system with plenty of mapping functions that is relatively user-friendly (especially for people coming from ArcMap).
+					</p>
+					<p>
+						QGIS resources:
+					</p>
+					<ul>
+						<li>
+							<a href="http://www.qgis.org/en/site/forusers/download.html" target="_blank"><strong>Download QGIS</strong></a> - follow instructions to download for specific operating system.
+						</li>
+						<li>
+							<a href="http://maps.cga.harvard.edu/qgis/" target="_blank"><strong>QGIS Walkthrough</strong></a> - an extensive quide to getting started with QGIS
+						</li>
+					</ul>
+					<h2 class="section">GIS Data</h2>
+				  <p>
+						There are two main types of map data: vector data and raster data.
+				  </p>
+					<h3>Vector Data</h3>
+					<p>
+						Vector data represents geographic data as geometric coordinates (x and y position). A vector data set can consist of either <strong>points</strong> (one coordinate), <strong>lines</strong> (two or more connected, open coordinates), or <strong>polygons</strong> (three or more connected, closed coordinates).
+					</p>
+					<div class="row thumbnail">
+						<div class="col-sm-4 col-xs-12 plp">
+							<h3 class="text-center">Point</h3>
+						</div>
+						<div class="col-sm-4 col-xs-12 plp">
+							<h3 class="text-center">Line</h3>
+						</div>
+						<div class="col-sm-4 col-xs-12 plp">
+							<h3 class="text-center">Polygon</h3>
+						</div>
+					</div>
+					<p>
+						The most common type of vector data used in GIS is the shapefile. A shapefile is not one file but actually a collection of several files. There are three mandatory files that describe the geometry of the shapefile (.shp), the tabular data associated with the shapefile (.dbf), and an index for moving through the shapefile (.shx), though more may be present (.prj, .shp.xml, .sbn, .sbx, etc.). These files must be kept together in the same directory. <strong>When adding a shapefile to a GIS you will load in the file with the .shp extension</strong>
+					</p>
+					<div class="row thumbnail">
+					  <div class="col-xs-12">
+					    <img src="css\media\shapefilesEx.PNG" alt="Shapefile files" class="img-responsive center-block"/>
+					  </div>
+					</div>
+					<h3>Raster Data</h3>
+					<p>
+						Raster Data is in the form of cells in a grid. Each cell in the grid represents one or more pieces of information. A photo of Earth from a satellite is an example. If you zoom in close enough you can see the individual pixels (cells) from the image.
+					</p>
+					<div class="row thumbnail">
+					  <div class="col-xs-12">
+					    <img src="css\media\RasterEx.png" alt="Raster Image" class="img-responsive center-block"/>
+					  </div>
+					</div>
+					<h3>Where to Find GIS Data</h3>
+					<p>
+						There are numerous online resources for accessing GIS data. Below are a few helpful sites with free data:
+					</p>
+					<ul>
+						<li>
+							<a href="http://data.nconemap.gov/geoportal/catalog/main/home.page" target="_blank"><strong>NC OneMap Geospatial Portal</strong></a> - for any and all North Carolina based GIS data. Use the search function to find specific data.
+						</li>
+						<li>
+							<a href="https://connect.ncdot.gov/resources/gis/Pages/GIS-Data-Layers.aspx" target="_blank"><strong>NCDOT</strong></a> - data from the NC Department of Transporation.
+						</li>
+						<li>
+							<a href="http://www.naturalearthdata.com/downloads/" target="_blank"><strong>Natural Earth</strong></a> - map data for the entire world at various scales.
+						</li>
+						<li>
+							<a href="http://earthexplorer.usgs.gov/" target="_blank"><strong>EarthExplorer</strong></a> - a tool for finding and downloading raster satellite imagery from around the world. Must sign up and request data.
+						</li>
+						<li>
+							<a href="https://www.census.gov/geo/maps-data/data/tiger-line.html"><strong>US Census</strong></a> - shapefiles related to United States census data.
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="js/main.js" charset="utf-8"></script>
+</html>
