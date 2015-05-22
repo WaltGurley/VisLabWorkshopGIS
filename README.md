@@ -1,2 +1,2 @@
 # VisLabWorkshopGIS
-An introductory guide to mapping and using GIS
+An (incomplete) introductory guide to mapping and using GIS
