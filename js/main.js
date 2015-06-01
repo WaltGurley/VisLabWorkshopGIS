@@ -1,6 +1,10 @@
+//Use d3.js to draw vector data (point, line, polygon) examples.
+
+//set width and height of svg elements
 var svgWidth = parseInt(d3.select(".plp").style("width")) - 30, //minus padding for bootstrap
   svgHeight = 100;
 
+//Set up svg elements
 var svgs = d3.selectAll(".plp")
   .append("svg")
   .attr({
@@ -9,10 +13,12 @@ var svgs = d3.selectAll(".plp")
     "height": svgHeight
   });
 
+//d3 function for parsing line data
 var makeLine = d3.svg.line()
     .x(function(d) { return d.x; })
     .y(function(d) { return d.y; });
 
+//data for point, line, and polygon example
 var vectorData = {
   "point": [ {"x": svgWidth / 2, "y": svgHeight / 2}],
   "line": [
@@ -27,6 +33,7 @@ var vectorData = {
   ]
 };
 
+//draw paths for examples
 svgs.append("path")
   .data(d3.entries(vectorData))
   .attr({
@@ -37,6 +44,7 @@ svgs.append("path")
       makeLine(d.value) + "Z" : makeLine(d.value); }
   });
 
+//draw vertices for examples
 svgs.selectAll("circle")
   .data(function(d, i) {
     return d3.values(vectorData)[i];
@@ -44,6 +52,6 @@ svgs.selectAll("circle")
   .enter().append("circle")
   .attr({
     "r": 5,
-    "cx": function(d) { console.log(d); return d.x; },
+    "cx": function(d) { return d.x; },
     "cy": function(d) { return d.y; }
   });
