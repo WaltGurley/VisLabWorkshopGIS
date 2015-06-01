@@ -15,8 +15,8 @@ var svgs = d3.selectAll(".plp")
 
 //d3 function for parsing line data
 var makeLine = d3.svg.line()
-    .x(function(d) { return d.x; })
-    .y(function(d) { return d.y; });
+  .x(function(d) { return d.x; })
+  .y(function(d) { return d.y; });
 
 //data for point, line, and polygon example
 var vectorData = {
